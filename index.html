@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luba AI | Turn long videos into vertical clips</title>
+<meta name="description" content="Luba finds the best moments in your podcast, webinar or stream, crops them to 9:16 and adds editable captions. Start free.">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232D3CF5'/%3E%3Cpath d='M11 8v12h9' stroke='%23fff' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Luba AI | Turn long videos into vertical clips">
+<meta property="og:description" content="Find the best moments, crop to 9:16, add editable captions.">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2D3CF5">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Luba AI","applicationCategory":"MultimediaApplication","operatingSystem":"Web","description":"Turns long videos into vertical clips with captions.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F6FA;--ink:#0E1330;--blue:#2D3CF5;--sun:#FFD84A;--mint:#C9F2E1;--mute:#586080;--line:#DDE0EC;
+--d:'Bricolage Grotesque','Arial Black',system-ui,sans-serif;--b:'Instrument Sans',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--b);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.w{max-width:1120px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--d);line-height:1.02;letter-spacing:-.02em}
+h2{font-size:clamp(30px,5vw,52px);font-weight:800;max-width:15ch}
+h3{font-size:22px;font-weight:700;line-height:1.15}
+p{max-width:60ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:0;background:var(--ink);color:#fff;font:600 16px var(--b);text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px);background:var(--blue)}
+.btn.sun{background:var(--sun);color:var(--ink)}.btn.sun:hover{background:#fff}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}.btn.line:hover{background:var(--ink);color:#fff}
+nav{position:sticky;top:0;z-index:9;background:rgba(245,246,250,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font:800 24px var(--d);text-decoration:none;letter-spacing:-.03em}
+.logo i{width:32px;height:32px;border-radius:10px;background:var(--blue);display:grid;place-items:center}
+.logo svg{width:16px;height:16px}
+.links{display:flex;align-items:center;gap:26px;font-weight:500}
+.links a{text-decoration:none;color:var(--mute)}.links a:hover{color:var(--ink)}
+.links .btn{min-height:42px;padding:0 20px;color:#fff}
+@media(max-width:760px){.links a:not(.btn){display:none}}
+/* hero */
+.hero{padding:56px 0 64px}
+.hero .w{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+h1{font-size:clamp(44px,7.4vw,92px);font-weight:800;letter-spacing:-.035em}
+h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%)}
+.hero p.lead{font-size:clamp(18px,2.2vw,21px);color:var(--mute);margin:24px 0 32px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero small{display:block;margin-top:16px;color:var(--mute);font-size:14px}
+.stage{display:grid;place-items:center}
+.phone{position:relative;width:min(280px,72vw);aspect-ratio:9/16;border-radius:38px;background:var(--ink);padding:9px;box-shadow:0 40px 80px -30px rgba(45,60,245,.55),0 0 0 2px var(--ink)}
+.screen{position:relative;width:100%;height:100%;border-radius:30px;overflow:hidden;background:radial-gradient(120% 70% at 50% 15%,#3d4cff 0%,#1b2373 55%,#0E1330 100%)}
+.person{position:absolute;left:50%;bottom:-8%;width:78%;transform:translateX(-50%)}
+.person b{display:block;width:34%;aspect-ratio:1;margin:0 auto -6%;border-radius:50%;background:var(--mint);position:relative;z-index:1}
+.person u{display:block;height:150px;border-radius:50% 50% 0 0/70% 70% 0 0;background:#fff;opacity:.92}
+.chip{position:absolute;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;font:600 12px var(--b)}
+.chip span{background:rgba(14,19,48,.7);color:#fff;padding:5px 10px;border-radius:99px}
+.chip span+span{background:var(--sun);color:var(--ink)}
+.cap{position:absolute;left:12px;right:12px;bottom:20%;text-align:center;font:800 25px/1.1 var(--d);color:#fff;text-transform:none;text-shadow:0 2px 0 rgba(14,19,48,.6)}
+.cap s{text-decoration:none;display:inline-block;margin:0 3px;padding:0 4px;border-radius:6px}
+.cap s.hot{background:var(--sun);color:var(--ink);transform:rotate(-3deg) scale(1.08)}
+/* timeline */
+.tl{background:var(--blue);color:#fff;padding:44px 0 52px}
+.tl-top{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.tl h2{font-size:clamp(24px,3.4vw,36px);max-width:none}
+.tl-top span{opacity:.8;font-size:15px}
+.wave{position:relative;display:flex;align-items:center;gap:3px;height:112px}
+.wave>i{flex:1;min-width:2px;border-radius:3px;background:rgba(255,255,255,.35)}
+.wave>i.sel{background:var(--sun)}
+.seg{position:absolute;top:-6px;bottom:-6px;border:0;background:rgba(255,216,74,.18);border-radius:10px;cursor:pointer;box-shadow:inset 0 0 0 2px rgba(255,216,74,.55);transition:background .2s}
+.seg:hover{background:rgba(255,216,74,.34)}
+.seg[aria-pressed=true]{background:rgba(255,216,74,.3);box-shadow:inset 0 0 0 3px var(--sun)}
+.seg span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font:700 13px var(--b);background:var(--sun);color:var(--ink);padding:2px 9px;border-radius:99px;white-space:nowrap}
+.tl-note{margin-top:34px;font-size:15px;opacity:.85}
+/* sections */
+section.s{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px;margin-bottom:48px}
+.head p{color:var(--mute)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.step{padding:0 24px 0 0;position:relative}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;font:700 18px var(--d);margin-bottom:20px;position:relative;z-index:1}
+.step::after{content:"";position:absolute;top:21px;left:44px;right:0;height:2px;background:var(--line)}
+.step:last-child::after{display:none}
+.step p{color:var(--mute);font-size:16px;margin-top:8px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr;gap:36px 8px}.step::after{display:none}.hero .w{grid-template-columns:1fr}}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.tile{border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:230px}
+.tile p{font-size:16px;margin-top:10px}
+.t1{grid-column:span 4;background:var(--ink);color:#fff}.t1 p{color:#B9BEDB}
+.t2{grid-column:span 2;background:var(--sun)}
+.t3{grid-column:span 2;background:var(--mint)}
+.t4{grid-column:span 2;background:#fff;box-shadow:inset 0 0 0 2px var(--line)}.t4 p,.t5 p{color:var(--mute)}
+.t5{grid-column:span 2;background:#fff;box-shadow:inset 0 0 0 2px var(--line)}
+.score{font:800 72px/1 var(--d);letter-spacing:-.04em}
+.score small{font-size:20px;opacity:.6;margin-left:4px}
+.mini{display:flex;gap:10px}.mini i{flex:1;aspect-ratio:9/16;max-height:110px;border-radius:12px;background:linear-gradient(160deg,#3d4cff,#1b2373);position:relative}
+.mini i:nth-child(2){background:linear-gradient(160deg,#C9F2E1,#5fd4a6)}.mini i:nth-child(3){background:linear-gradient(160deg,#FFD84A,#ff9d3d)}
+.mini i::after{content:"";position:absolute;left:18%;right:18%;bottom:16%;height:7px;border-radius:4px;background:rgba(255,255,255,.9)}
+@media(max-width:860px){.bento{grid-template-columns:1fr}.tile{grid-column:auto!important}}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.plan{border-radius:28px;padding:34px 30px;background:#fff;box-shadow:inset 0 0 0 2px var(--line);display:flex;flex-direction:column}
+.plan.pop{background:var(--blue);color:#fff;box-shadow:none;transform:translateY(-12px)}
+.price{font:800 56px/1 var(--d);margin:16px 0 4px;letter-spacing:-.03em}.price small{font:500 16px var(--b);opacity:.65}
+.plan ul{list-style:none;padding:0;margin:22px 0 30px;display:grid;gap:10px;flex:1}
+.plan li::before{content:"✓";font-weight:700;margin-right:10px;color:var(--blue)}
+.plan.pop li::before{color:var(--sun)}
+.plan .btn{width:100%}.plan.pop .btn{background:var(--sun);color:var(--ink)}
+@media(max-width:860px){.plans{grid-template-columns:1fr}.plan.pop{transform:none}}
+details{border-top:2px solid var(--line);padding:22px 0}
+details:last-of-type{border-bottom:2px solid var(--line)}
+summary{font:700 21px var(--d);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::after{content:"+";font-size:28px;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);margin-top:12px}
+.faq{max-width:760px}
+.end{background:var(--ink);color:#fff;padding:96px 0;text-align:left}
+.end h2{max-width:14ch;font-size:clamp(36px,6.5vw,76px)}
+.end p{color:#B9BEDB;margin:20px 0 32px}
+.join{display:flex;flex-wrap:wrap;gap:12px;max-width:520px}
+.join input{flex:1;min-width:220px;min-height:52px;border-radius:999px;border:0;padding:0 22px;font:500 16px var(--b);background:#fff;color:var(--ink)}
+.msg{margin-top:14px;color:var(--sun);min-height:24px}
+footer{padding:36px 0;font-size:15px;color:var(--mute)}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+footer a{margin-left:20px;text-decoration:none}footer a:hover{color:var(--ink)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="w">
+<a class="logo" href="#top" aria-label="Luba AI home"><i><svg viewBox="0 0 16 16" fill="none"><path d="M4 2v9h7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Luba</a>
+<div class="links"><a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn" href="#start">Start free</a></div>
+</div></nav>
+
+<main id="top">
+<header class="hero"><div class="w">
+<div>
+<h1>One long video in. A week of <em>shorts</em> out.</h1>
+<p class="lead">Luba listens to your podcast, webinar or stream, picks the moments people will actually watch, and turns them into vertical clips with captions you can edit.</p>
+<div class="cta"><a class="btn" href="#start">Get early access</a><a class="btn line" href="#timeline">See how a clip is picked</a></div>
+<small>Free plan includes 60 minutes of video each month.</small>
+</div>
+<div class="stage"><div class="phone" aria-label="Preview of a captioned vertical clip"><div class="screen">
+<div class="chip"><span id="pTime">0:00</span><span id="pScore">Score 0</span></div>
+<div class="person" aria-hidden="true"><b></b><u></u></div>
+<div class="cap" id="cap" aria-live="off"></div>
+</div></div></div>
+</div></header>
+
+<section class="tl" id="timeline"><div class="w">
+<div class="tl-top"><h2>A 48-minute podcast, scanned in one pass</h2><span>Tap a highlighted section to preview that clip</span></div>
+<div class="wave" id="wave" role="group" aria-label="Podcast timeline with five suggested clips"></div>
+<p class="tl-note" id="pTitle"></p>
+</div></section>
+
+<section class="s" id="how"><div class="w">
+<div class="head"><h2>From link to clips in four steps</h2><p>You review everything before it leaves the app.</p></div>
+<div class="steps">
+<div class="step"><h3>Add your video</h3><p>Paste a link or upload a video or audio file.</p></div>
+<div class="step"><h3>Luba finds moments</h3><p>It transcribes the talk and ranks the strongest 30 to 90 second stretches.</p></div>
+<div class="step"><h3>Edit the clip</h3><p>Trim, pick a caption style, and choose fill, split or blur layout.</p></div>
+<div class="step"><h3>Export or schedule</h3><p>Download the clip and SRT, or queue it for posting.</p></div>
+</div></div></section>
+
+<section class="s" id="features" style="padding-top:0"><div class="w">
+<div class="head"><h2>Everything between raw footage and posted</h2></div>
+<div class="bento">
+<div class="tile t1"><div><h3>Moments, ranked</h3><p>Every suggested clip gets a score so you start with the best one instead of scrubbing through an hour of tape.</p></div><div class="score">94<small>/100 top clip</small></div></div>
+<div class="tile t2"><div><h3>Captions that move</h3><p>Word-by-word highlighting in three styles and five colors.</p></div></div>
+<div class="tile t3"><div><h3>Vertical in one click</h3><p>Fill the frame, stack two speakers, or blur the sides.</p></div><div class="mini" aria-hidden="true"><i></i><i></i><i></i></div></div>
+<div class="tile t4"><div><h3>Edit the words</h3><p>Fix a name or a term in the transcript and the captions update.</p></div></div>
+<div class="tile t5"><div><h3>Take it anywhere</h3><p>Export the clip, SRT captions, or the project file.</p></div></div>
+</div></div></section>
+
+<section class="s" id="pricing" style="padding-top:0"><div class="w">
+<div class="head"><h2>Start free. Pay when you post more.</h2></div>
+<div class="plans">
+<div class="plan"><h3>Free</h3><div class="price">$0<small> /month</small></div><ul><li>60 minutes of source video</li><li>Auto clips and captions</li><li>720p export</li></ul><a class="btn line" href="#start">Start free</a></div>
+<div class="plan pop"><h3>Pro</h3><div class="price">$29<small> /month</small></div><ul><li>1,200 minutes of source video</li><li>Moment scoring</li><li>1080p vertical export</li><li>Scheduling to socials</li></ul><a class="btn" href="#start">Choose Pro</a></div>
+<div class="plan"><h3>Teams</h3><div class="price">$99<small> /month</small></div><ul><li>Unlimited uploads</li><li>Brand kits and seats</li><li>API access</li></ul><a class="btn line" href="#start">Talk to us</a></div>
+</div></div></section>
+
+<section class="s" id="faq" style="padding-top:0"><div class="w">
+<div class="head"><h2>Questions people ask first</h2></div>
+<div class="faq">
+<details><summary>What kinds of video work best?</summary><p>Talking-based video: podcasts, interviews, webinars, lectures and streams. Clear audio gives the best results.</p></details>
+<details><summary>Can I change what Luba picks?</summary><p>Yes. Move the start and end points, edit the transcript, or skip a suggestion entirely.</p></details>
+<details><summary>Which file types can I upload?</summary><p>Most video and audio formats, up to 10 GB per file.</p></details>
+<details><summary>Do I need to be on camera?</summary><p>No. Audio-only recordings get captions and a visual background.</p></details>
+</div></div></section>
+
+<section class="end" id="start"><div class="w">
+<h2>Make your first clips this week.</h2>
+<p>Join the early access list and we will email you when your spot opens.</p>
+<!-- Replace YOUR_FORM_ID with your Formspree form ID (formspree.io) so sign-ups reach your inbox. -->
+<form class="join" id="join" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required>
+<button class="btn sun" type="submit">Get early access</button>
+</form>
+<div class="msg" id="msg" role="status"></div>
+</div></section>
+</main>
+
+<footer><div class="w"><span>© 2026 Luba AI</span><span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></span></div></footer>
+
+<script>
+const T=2892,N=120,wave=document.getElementById('wave'),cap=document.getElementById('cap');
+const clips=[
+{a:10,b:12,s:91,t:'Post before you feel ready',w:'Your first ten videos will probably flop and that is fine'},
+{a:27,b:29,s:96,t:'Hooks matter more than editing',w:'The first three seconds decide whether anyone stays to watch'},
+{a:49,b:52,s:88,t:'Stop explaining, start showing',w:'Show the result first then explain how you got there'},
+{a:71,b:73,s:93,t:'The one number to track',w:'Watch time beats views every single time so track that'},
+{a:96,b:98,s:85,t:'What I would do differently',w:'I would start posting a year earlier and ask for help sooner'}];
+const f=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
+let h=7,cur=0,timer,btns=[];
+const rnd=()=>(h=(h*9301+49297)%233280)/233280;
+for(let i=0;i<N;i++){const e=document.createElement('i');e.style.height=(18+rnd()*70)+'%';e.dataset.i=i;wave.appendChild(e)}
+clips.forEach((c,k)=>{const b=document.createElement('button');b.className='seg';b.type='button';
+b.style.left=(c.a/N*100)+'%';b.style.width=((c.b-c.a)/N*100)+'%';
+b.setAttribute('aria-label','Clip '+(k+1)+': '+c.t+', score '+c.s);
+b.innerHTML='<span>'+c.s+'</span>';b.onclick=()=>pick(k);wave.appendChild(b);btns.push(b)});
+function pick(k){cur=k;const c=clips[k];
+btns.forEach((b,j)=>b.setAttribute('aria-pressed',j===k));
+wave.querySelectorAll('i').forEach((e,i)=>e.classList.toggle('sel',i>=c.a&&i<c.b));
+document.getElementById('pTime').textContent=f(c.a/N*T)+' to '+f(c.b/N*T);
+document.getElementById('pScore').textContent='Score '+c.s;
+document.getElementById('pTitle').textContent='Clip '+(k+1)+' of '+clips.length+': '+c.t;
+play(c.w.split(' '))}
+function play(ws){clearInterval(timer);let i=0;
+const draw=()=>{const g=Math.floor(i/4),part=ws.slice(g*4,g*4+4);
+cap.innerHTML=part.map((w,j)=>'<s'+(g*4+j===i?' class="hot"':'')+'>'+w+'</s>').join(' ')};
+draw();
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+timer=setInterval(()=>{i=(i+1)%ws.length;draw()},420)}
+pick(1);
+const form=document.getElementById('join'),msg=document.getElementById('msg');
+form.addEventListener('submit',async e=>{e.preventDefault();
+try{const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+if(r.ok){msg.textContent='You are on the list. Check your inbox soon.';form.reset()}else throw 0}
+catch(_){msg.textContent='Could not send. Check the form ID and try again.'}});
+</script>
+</body>
+</html>
